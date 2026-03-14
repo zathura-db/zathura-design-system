@@ -1,5 +1,5 @@
 {
-  "name": "@zathura-db/react-design-system",
+  "name": "@zathura/react-design-system",
   "version": "0.1.0",
   "description": "A React design system with Tailwind CSS components",
   "keywords": [
