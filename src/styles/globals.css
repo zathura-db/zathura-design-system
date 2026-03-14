@@ -1,0 +1,93 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ─── AnimatedText ─────────────────────────────────────────── */
+
+.ds-animated-text-container {
+  width: 100%;
+  padding-right: 1%;
+  overflow: hidden;
+}
+
+.ds-animated-text-container .text {
+  position: relative;
+  color: #ed0101;
+  font-size: 6vh;
+  font-weight: 600;
+}
+
+.ds-animated-text-container .text.first-text {
+  color: #fff;
+}
+
+.text.sec-text::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  background-color: #131a25;
+  animation:
+    ds-typing 1s steps(10) forwards,
+    ds-removeMask 0s linear 1s forwards;
+}
+
+.text.sec-text::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  border-left: 2px solid #4070f4;
+  animation:
+    ds-cursorMove 1s steps(10) forwards,
+    ds-cursorFlash 0.7s infinite;
+}
+
+@keyframes ds-cursorMove {
+  to {
+    left: 100%;
+  }
+}
+
+@keyframes ds-typing {
+  to {
+    width: 0%;
+  }
+}
+
+@keyframes ds-cursorFlash {
+  0%,
+  100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0;
+  }
+}
+
+@keyframes ds-removeMask {
+  to {
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+/* ─── Section ──────────────────────────────────────────────── */
+
+.clip-chevron {
+  clip-path: polygon(0 10%, 50% 0%, 100% 10%, 100% 100%, 0 100%);
+}
+
+/* ─── StarBackground ───────────────────────────────────────── */
+
+@keyframes animStar {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-1000px);
+  }
+}
