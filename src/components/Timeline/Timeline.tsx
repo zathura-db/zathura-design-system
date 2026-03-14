@@ -41,18 +41,14 @@ export default function Timeline({ Timelines, PrimaryColour }: TimelineProps) {
             <li key={index} className="relative flex">
               {!isMobile && (
                 <div className="w-40 text-right pr-6 pt-6">
-                  <span className="text-sm font-semibold block">
-                    {item.startDate} to
-                  </span>
+                  <span className="text-sm font-semibold block">{item.startDate} to</span>
                   <span className="text-sm font-semibold block">
                     {item.endDate ? item.endDate : "current"}
                   </span>
                 </div>
               )}
 
-              <div
-                className={`relative w-8 flex justify-center ${isMobile && "ml-4"}`}
-              >
+              <div className={`relative w-8 flex justify-center ${isMobile && "ml-4"}`}>
                 <span className="absolute top-0 bottom-0 w-[4px] bg-gray-300"></span>
                 <span
                   className={`relative z-10 w-4 h-4 rounded-full mt-7 ${
@@ -65,8 +61,7 @@ export default function Timeline({ Timelines, PrimaryColour }: TimelineProps) {
 
               <div className="ml-4 bg-white rounded-lg p-6 w-full text-left">
                 <h3 className="text-lg font-bold">
-                  {isMobile &&
-                    `${item.startDate} to ${item.endDate ? item.endDate : "current"} - `}
+                  {isMobile && `${item.startDate} to ${item.endDate ? item.endDate : "current"} - `}
                   {item.JobTitle} at {item.companyName}
                 </h3>
 
@@ -93,27 +88,19 @@ export default function Timeline({ Timelines, PrimaryColour }: TimelineProps) {
                   >
                     <div className="mt-4 space-y-4">
                       {item.projects.map((project, pIndex) => (
-                        <div
-                          key={pIndex}
-                          className="bg-gray-100 rounded-md p-4 space-y-3"
-                        >
-                          <h4 className="font-semibold">
-                            {project.ShortDescription}
-                          </h4>
+                        <div key={pIndex} className="bg-gray-100 rounded-md p-4 space-y-3">
+                          <h4 className="font-semibold">{project.ShortDescription}</h4>
                           <p className="text-sm mt-1">{project.Description}</p>
                           {project.BulletPoints && (
-                            <h5 className="text-sm mt-1 font-semibold">
-                              My contributions were:
-                            </h5>
+                            <h5 className="text-sm mt-1 font-semibold">My contributions were:</h5>
                           )}
-                          {project.BulletPoints &&
-                            project.BulletPoints.length > 0 && (
-                              <ul className="text-sm list-disc pl-5 mt-2">
-                                {project.BulletPoints.map((bp, bpIndex) => (
-                                  <li key={bpIndex}>{bp}</li>
-                                ))}
-                              </ul>
-                            )}
+                          {project.BulletPoints && project.BulletPoints.length > 0 && (
+                            <ul className="text-sm list-disc pl-5 mt-2">
+                              {project.BulletPoints.map((bp, bpIndex) => (
+                                <li key={bpIndex}>{bp}</li>
+                              ))}
+                            </ul>
+                          )}
                         </div>
                       ))}
                     </div>

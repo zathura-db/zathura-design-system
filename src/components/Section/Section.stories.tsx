@@ -24,9 +24,7 @@ export const White: Story = {
   args: {
     sectionTitle: "My Section",
     colour: "white",
-    children: (
-      <p className="text-gray-700 max-w-xl">Section content goes here.</p>
-    ),
+    children: <p className="text-gray-700 max-w-xl">Section content goes here.</p>,
   },
 };
 
@@ -34,11 +32,7 @@ export const Black: Story = {
   args: {
     sectionTitle: "Dark Section",
     colour: "black",
-    children: (
-      <p className="text-white max-w-xl">
-        Section content on a dark background.
-      </p>
-    ),
+    children: <p className="text-white max-w-xl">Section content on a dark background.</p>,
   },
 };
 
@@ -46,8 +40,6 @@ export const Orange: Story = {
   args: {
     sectionTitle: "Orange Section",
     colour: "orange",
-    children: (
-      <p className="text-white max-w-xl">Vibrant orange section content.</p>
-    ),
+    children: <p className="text-white max-w-xl">Vibrant orange section content.</p>,
   },
 };

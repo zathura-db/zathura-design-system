@@ -1,8 +1,6 @@
 import { useEffect, useRef, useState } from "react";
 import { tv, VariantProps } from "tailwind-variants";
-import InformationCard, {
-  type DataCard,
-} from "../InformationCard/InformationCard";
+import InformationCard, { type DataCard } from "../InformationCard/InformationCard";
 import HiddenInformationCard from "../InformationCard/HiddenInformationCard";
 import DirectionButtons from "../DirectionButtons/DirectionButtons";
 
@@ -82,8 +80,7 @@ export default function Carousel({
   };
 
   const getVisibleIndexes = () => {
-    const left =
-      (currentIndex - 1 + informationCards.length) % informationCards.length;
+    const left = (currentIndex - 1 + informationCards.length) % informationCards.length;
     const center = currentIndex;
     const right = (currentIndex + 1) % informationCards.length;
     return [left, center, right];
@@ -109,24 +106,12 @@ export default function Carousel({
           style={{
             width: `${(cardWidth + gap) * 3 - gap}px`,
             transform: `translateX(${getTranslateX()}px)`,
-            transition: transition
-              ? "transform 0.5s cubic-bezier(0.4,0,0.2,1)"
-              : "none",
+            transition: transition ? "transform 0.5s cubic-bezier(0.4,0,0.2,1)" : "none",
           }}
         >
           {informationCards.map((informationCard, index) => {
-            if (
-              index === leftIndex ||
-              index === centerIndex ||
-              index === rightIndex
-            )
-              return null;
-            return (
-              <HiddenInformationCard
-                key={index}
-                informationCard={informationCard}
-              />
-            );
+            if (index === leftIndex || index === centerIndex || index === rightIndex) return null;
+            return <HiddenInformationCard key={index} informationCard={informationCard} />;
           })}
           {[leftIndex, centerIndex, rightIndex].map((pos) => {
             const card = informationCards[pos];

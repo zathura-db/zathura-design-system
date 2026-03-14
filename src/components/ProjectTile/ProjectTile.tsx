@@ -1,7 +1,5 @@
 import Button from "../Button/Button";
-import InformationCard, {
-  type DataCard,
-} from "../InformationCard/InformationCard";
+import InformationCard, { type DataCard } from "../InformationCard/InformationCard";
 
 interface Link {
   href: string;
@@ -56,11 +54,7 @@ export default function ProjectTile({
       {/* Desktop view */}
       <div className="hidden md:flex justify-center w-full max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="relative w-full aspect-video rounded-2xl overflow-hidden shadow-xl group cursor-pointer">
-          <img
-            src={imageSrc}
-            alt={title}
-            className="object-cover w-full h-full absolute inset-0"
-          />
+          <img src={imageSrc} alt={title} className="object-cover w-full h-full absolute inset-0" />
 
           {stack.length > 0 && (
             <div className="absolute bottom-4 left-4 flex flex-wrap gap-2 z-10">
@@ -76,12 +70,8 @@ export default function ProjectTile({
           )}
 
           <div className="absolute inset-0 bg-black bg-opacity-0 group-hover:bg-opacity-70 transition-all duration-300 flex flex-col justify-center items-center px-12 py-8 space-y-3 opacity-0 group-hover:opacity-100">
-            <h3 className="text-3xl font-bold leading-tight text-white text-center">
-              {title}
-            </h3>
-            <p className="text-base text-white leading-snug text-center max-w-xl">
-              {description}
-            </p>
+            <h3 className="text-3xl font-bold leading-tight text-white text-center">{title}</h3>
+            <p className="text-base text-white leading-snug text-center max-w-xl">{description}</p>
 
             <div className="flex flex-row gap-4">
               <Button

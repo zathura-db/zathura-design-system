@@ -68,9 +68,7 @@ export default function Section({
 
   return (
     <section id={sectionTitle}>
-      {type === "chevron" && (
-        <div className={`clip-chevron ${theme.background}`} />
-      )}
+      {type === "chevron" && <div className={`clip-chevron ${theme.background}`} />}
 
       <div
         className={`${sectionVariants({ type })} ${theme.background} ${theme.textColour} ${className ?? ""}`}

@@ -60,12 +60,8 @@ export default function InformationCard({
 
       <div className="h-1/2 flex flex-col justify-between text-center">
         <div className="px-4 sm:px-8 py-4 flex-1 flex flex-col justify-center">
-          <h3 className="text-lg font-bold text-gray-900 pb-2">
-            {informationCard.title}
-          </h3>
-          <p className="text-gray-600 text-sm leading-relaxed">
-            {informationCard.text}
-          </p>
+          <h3 className="text-lg font-bold text-gray-900 pb-2">{informationCard.title}</h3>
+          <p className="text-gray-600 text-sm leading-relaxed">{informationCard.text}</p>
         </div>
         <div className="flex w-full">
           <a

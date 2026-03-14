@@ -50,11 +50,7 @@ export default function DropDown({
         className={`mt-4 text-sm font-semibold ${className ?? button()} hover:underline flex items-center gap-2`}
       >
         {isOpen ? toggleText?.CloseText : toggleText?.OpenText}
-        <span
-          className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}
-        >
-          ▼
-        </span>
+        <span className={`transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`}>▼</span>
       </button>
 
       <div

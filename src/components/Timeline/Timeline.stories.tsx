@@ -26,12 +26,8 @@ const timelines = [
     projects: [
       {
         ShortDescription: "Dashboard Redesign",
-        Description:
-          "Rebuilt the analytics dashboard with React and TypeScript.",
-        BulletPoints: [
-          "Reduced load time by 40%",
-          "Improved accessibility to WCAG 2.1 AA",
-        ],
+        Description: "Rebuilt the analytics dashboard with React and TypeScript.",
+        BulletPoints: ["Reduced load time by 40%", "Improved accessibility to WCAG 2.1 AA"],
       },
     ],
   },

@@ -29,10 +29,7 @@ export default function Chart({ chartTitle, chartColour, skills }: ChartProps) {
             <p className="text-white font-bold">{skill.level}%</p>
           </div>
           <div className="bg-gray-900 h-4 rounded">
-            <div
-              className={`${chartColour} h-4 rounded`}
-              style={{ width: `${skill.level}%` }}
-            />
+            <div className={`${chartColour} h-4 rounded`} style={{ width: `${skill.level}%` }} />
           </div>
         </div>
       ))}

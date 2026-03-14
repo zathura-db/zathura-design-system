@@ -20,10 +20,7 @@ export type { DropDownProps } from "./components/DropDown/DropDown";
 export { default as Footer } from "./components/Footer/Footer";
 
 export { default as InformationCard } from "./components/InformationCard/InformationCard";
-export type {
-  DataCard,
-  InformationCardProps,
-} from "./components/InformationCard/InformationCard";
+export type { DataCard, InformationCardProps } from "./components/InformationCard/InformationCard";
 
 export { default as HiddenInformationCard } from "./components/InformationCard/HiddenInformationCard";
 export type { HiddenInformationCardProps } from "./components/InformationCard/HiddenInformationCard";
@@ -42,16 +39,10 @@ export { default as Section } from "./components/Section/Section";
 export type { SectionProps } from "./components/Section/Section";
 
 export { default as StarBackground } from "./components/StarBackground/StarBackground";
-export type {
-  StarBackgroundProps,
-  LayerConfig,
-} from "./components/StarBackground/StarBackground";
+export type { StarBackgroundProps, LayerConfig } from "./components/StarBackground/StarBackground";
 
 export { default as Timeline } from "./components/Timeline/Timeline";
-export type {
-  TimelineProps,
-  TimelineItem,
-} from "./components/Timeline/Timeline";
+export type { TimelineProps, TimelineItem } from "./components/Timeline/Timeline";
 
 // Hooks
 export { useIsMobile } from "./hooks/useIsMobile";

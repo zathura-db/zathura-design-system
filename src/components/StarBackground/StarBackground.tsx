@@ -7,11 +7,8 @@ function randomColorInRange(colorStart: string, colorEnd: string) {
   const end = parseInt(colorEnd.replace("#", ""), 16);
 
   const r =
-    ((start >> 16) & 0xff) +
-    Math.random() * (((end >> 16) & 0xff) - ((start >> 16) & 0xff));
-  const g =
-    ((start >> 8) & 0xff) +
-    Math.random() * (((end >> 8) & 0xff) - ((start >> 8) & 0xff));
+    ((start >> 16) & 0xff) + Math.random() * (((end >> 16) & 0xff) - ((start >> 16) & 0xff));
+  const g = ((start >> 8) & 0xff) + Math.random() * (((end >> 8) & 0xff) - ((start >> 8) & 0xff));
   const b = (start & 0xff) + Math.random() * ((end & 0xff) - (start & 0xff));
 
   return `rgb(${r | 0}, ${g | 0}, ${b | 0})`;

@@ -41,11 +41,7 @@ export function LinkText({
     <a
       onClick={onClick}
       href={href}
-      className={
-        linkVariants({ colour: linkColour, fontWeight }) +
-        " " +
-        (className ?? "")
-      }
+      className={linkVariants({ colour: linkColour, fontWeight }) + " " + (className ?? "")}
     >
       {children}
     </a>

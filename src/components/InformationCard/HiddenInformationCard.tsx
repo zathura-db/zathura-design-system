@@ -4,9 +4,7 @@ export type HiddenInformationCardProps = {
   informationCard: DataCard;
 };
 
-export default function HiddenInformationCard({
-  informationCard,
-}: HiddenInformationCardProps) {
+export default function HiddenInformationCard({ informationCard }: HiddenInformationCardProps) {
   return (
     <div className="hidden">
       <img

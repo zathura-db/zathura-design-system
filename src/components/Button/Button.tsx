@@ -11,8 +11,7 @@ const button = tv({
       green: "bg-themeGreen",
       purple: "bg-themePurple",
       black: "bg-themeBlack",
-      orangeOutline:
-        "bg-transparent border-2 border-themeOrange text-themeOrange",
+      orangeOutline: "bg-transparent border-2 border-themeOrange text-themeOrange",
     },
     textColour: {
       white: "text-white",
@@ -26,10 +25,8 @@ const button = tv({
       greenOffset: "hover:bg-green-900",
       purpleOffset: "hover:bg-purple-700",
       blackOffset: "hover:bg-gray-800",
-      orangeFill:
-        "hover:bg-themeOrange hover:text-white transition-colors duration-200",
-      orangeOutline:
-        "hover:bg-transparent hover:border-themeOrange border-2 border-themeOrange",
+      orangeFill: "hover:bg-themeOrange hover:text-white transition-colors duration-200",
+      orangeOutline: "hover:bg-transparent hover:border-themeOrange border-2 border-themeOrange",
     },
     buttonSize: {
       small: "py-2 px-4 font-bold",
@@ -53,9 +50,7 @@ const button = tv({
  * Button component props extending native button HTML attributes with variant options.
  */
 export interface ButtonProps
-  extends
-    React.ButtonHTMLAttributes<HTMLButtonElement>,
-    VariantProps<typeof button> {}
+  extends React.ButtonHTMLAttributes<HTMLButtonElement>, VariantProps<typeof button> {}
 
 /**
  * A customizable button component with theme colors, hover effects, and size variants.

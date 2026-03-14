@@ -8,15 +8,7 @@ const meta: Meta<typeof Button> = {
   argTypes: {
     baseColour: {
       control: "select",
-      options: [
-        "red",
-        "orange",
-        "blue",
-        "green",
-        "purple",
-        "black",
-        "orangeOutline",
-      ],
+      options: ["red", "orange", "blue", "green", "purple", "black", "orangeOutline"],
     },
     hoverStyle: {
       control: "select",
